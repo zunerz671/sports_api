@@ -1,4 +1,6 @@
 class SportsController < ApplicationController
+  before_action :authorize_request, only: [ :create ]
+
   def index
     sports = Sport.all
 
